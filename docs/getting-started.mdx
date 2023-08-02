@@ -7,17 +7,89 @@ import Link from '@docusaurus/Link';
 
 # Getting Started
 
-:::tip
+:::note
 
-Coming soon to a browser near you.
-
-<Tabs>
-  <TabItem value="discord" label="Discord"><p><Link to="https://discord.gg/6GeGaGjs97/">Discord Server</Link></p></TabItem>
-  <TabItem value="twitter" label="X"><p><Link to="https://x.com/mcfunctionsdocs/">X.com</Link></p></TabItem>
-</Tabs>
+These docs are still work in progress, please join the <Link to="https://discord.gg/6GeGaGjs97/">Discord Server</Link> for any specific help you require.
 
 :::
 
+## What is a Datapack?
+
+- In hindsight a Datapack is a collection of `.json` files, and `.mcfunction` files, that provides a way to further customise the Minecraft Experience.
+- Datapacks can be used to override or add new: 
+  - Advancements
+  - Dimensions
+  - Functions
+  - Loot Tables
+  - Predicates
+  - Item Modifiers
+  - Recipies
+  - Structures
+  - Tags
+  - Damage Types
+  - World Generation Settings
+  - Biomes
+
+## How to set up the base of the Datapack:
+
+1. To start, in the selected world save folder of your choice, go to the world's datapack folder located here: `.minecraft/saves/(world)/datapacks`
+2. In this directory, create a new folder. You can name this anything you want.
+
+### The `pack.mcmeta` file:
+
+3. Enter the folder, and create a new file with the name and extention: **`pack.mcmeta`**, this is what Minecraft Reads to identify the file as a datapack.
+4. Inside the `pack.mcmeta` file you'll need to paste these lines of code:
 ```
-execute as @a run function main:exterminate
+{
+	"pack": {
+		"pack_format": 15,
+		"description": "(Fill this with your datapack's description.)"
+	}
+}
 ```
+
+:::caution
+Please note that the `pack_format` number can change depending on future Minecraft Updates. **15** is the current major release datapack format number.
+:::
+
+5. Save the `pack.mcmeta` file and in the same directory, create a new file named: **`data`**.
+6. Inside the new `data` folder create 2 new folders. One named: **`minecraft`** and another named whater you wish. The name you choose for this folder will impact the way you execute functions in future. So keep it short and simple. examples: **`main`** or **`map`**. This is the folder where we'll be adding all of the `.mcfunction` files.
+
+### Tick and Load `.json` files:
+
+- The `tick.json` file allocates a select file in our yet to be created functions folder to be the designated `.mcfunction` file that runs every tick (A bit like a repeating command block.)
+- The `load.json` file allocates a select file in out yet to be created functions folder to be the designated `.mcfunction` file that runs every time the datapack is reloaded in-game with `/reload`.
+
+7. Inside the new `minecraft` folder create another folder named **`tags`**, and inside that another folder named **`functions`**, in this we'll be allocating our `load` and `tick` json files.
+
+* Create a new file called **`load.json`**, and inside paste this code:
+```
+{
+	"values": [
+		"%:load"
+	]
+}
+```
+> Replace the `%` with the name of the folder you chose that effects your functions. (Provided examples were **`main`** or **`map`**)
+
+
+* And in the same folder create another new file called **`tick.json`**, and inside pase this code:
+```
+{
+	"values": [
+		"%:tick"
+	]
+}
+```
+> Replace the `%` with the name of the folder you chose that effects your functions. (Provided examples were **`main`** or **`map`**)
+
+### Working with `.mcfunction` files:
+
+8. Back to the `data` folder, go into the folder you named for your functions, and create a folder within named: **`functions`**
+9. This `functions` folder is where all of your `.mcfunction` files will be held. Create a new file and name it **`tick.mcfunction`** and another named **`load.mcfunction`** These are the two files we setup the allocation for prior.
+
+To test that the datapack works, in the `load.mcfunction` file, type `say hello new datapack`. Save it and in-game, type the command `/reload`, If everything is setup correctly, the Say command should execute.
+
+:::caution
+Please note, that `.mcfunction` files do **NOT** use the **`/`** prefix for commands. Adding a `/` will cause the datapack to not load, until it is removed from all commands that contain the prefix.
+:::

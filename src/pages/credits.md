@@ -16,15 +16,15 @@ Listed here will be credits for those who have contributed towards the MCFunctio
 
 ### Contributors
 
+> -
 > *
+> -
 > *
-> *
-> *
-> *
+> -
 
 ### Wikis
 
 > *
+> -
 > *
-> *
-> *
+> -
