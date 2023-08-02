@@ -76,7 +76,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} MCFunctions.com, By Aandeel`,
+        copyright: `Copyright © ${new Date().getFullYear()} MCFunctions.com, By Aandeel <br><a>MCFunctions.com if not affiliated with Minecraft or Mojang</a>`,
       },
       prism: {
         theme: lightCodeTheme,
