@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
   repository_dispatch:
   workflow_dispatch:
 jobs:
@@ -28,7 +28,7 @@ jobs:
       - run: yarn
       - run: git submodule init
       - run: git submodule update
-      - run: yarn deploy
+      - run: yarn build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
