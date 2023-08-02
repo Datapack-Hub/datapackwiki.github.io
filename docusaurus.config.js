@@ -71,6 +71,7 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
+          {to: 'credits', label: 'Credits', position: 'right'},
         ],
       },
       footer: {
@@ -80,6 +81,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        defaultLanguage: 'js',
       },
     }),
 };
