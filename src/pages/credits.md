@@ -22,9 +22,6 @@ Listed here will be credits for those who have contributed towards the MCFunctio
 > *
 > -
 
-### Wikis
+### Special Thanks
 
-> *
-> -
-> *
-> -
+> FetchBot
