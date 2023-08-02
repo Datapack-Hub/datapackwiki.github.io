@@ -14,7 +14,8 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
+        <div>
+          <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
@@ -27,6 +28,7 @@ function HomepageHeader() {
             to="https://discord.gg/6GeGaGjs97">
             Join the discord.
           </Link>
+        </div>
         </div>
       </div>
     </header>
