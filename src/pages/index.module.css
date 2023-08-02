@@ -17,7 +17,8 @@
 }
 
 .buttons {
-  display: flex;
-  align-items: flex-start;
+  display: inline-block;
+  margin-inline: 20px;
+  align-items: center;
   justify-content: center;
 }
