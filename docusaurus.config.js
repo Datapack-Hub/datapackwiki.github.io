@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'MCFunctions Docs',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Building an easy way to creating datapacks for Minecraft Java',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
