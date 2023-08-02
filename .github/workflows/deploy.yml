@@ -28,7 +28,7 @@ jobs:
       - run: yarn
       - run: git submodule init
       - run: git submodule update
-      - run: yarn build
+      - run: yarn deploy
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
