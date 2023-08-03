@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://mcfunctions.com/',
+  url: 'https://mcfunctions.wiki/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -77,7 +77,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} MCFunctions.com, By Aandeel <br><a>MCFunctions.com if not affiliated with Minecraft or Mojang</a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} MCFunctions.wiki, By Aandeel <br><a>MCFunctions.com if not affiliated with Minecraft or Mojang</a>`,
       },
       prism: {
         theme: lightCodeTheme,
