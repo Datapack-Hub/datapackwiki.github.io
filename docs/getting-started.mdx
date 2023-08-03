@@ -7,6 +7,9 @@ import Link from '@docusaurus/Link';
 
 # Getting Started
 
+If you're new to datapacks, you're at the right place. Looking around, getting into datapack creation might seem confusing, but once you've grasped the basics, you'll be off to a good start.
+This Getting Started Page explains step-by-step, how to set up the file structure for a datapack, prominently for the use of `.mcfunction` files.
+
 :::note
 
 These docs are still work in progress, please join the <Link to="https://discord.gg/6GeGaGjs97">Discord Server</Link> for any specific help you require.
@@ -57,7 +60,7 @@ Please note that the `pack_format` number can change depending on future Minecra
 :::
 
 5. Save the `pack.mcmeta` file and in the same directory, create a new file named: **`data`**.
-6. Inside the new `data` folder create 2 new folders. One named: **`minecraft`** and another named whater you wish. The name you choose for this folder will impact the way you execute functions in future. So keep it short and simple. examples: **`main`** or **`map`**. This is the folder where we'll be adding all of the `.mcfunction` files.
+6. Inside the new `data` folder create 2 new folders. One named: **`minecraft`** and another named whater you wish. The name you choose for this folder will impact the way you execute functions in future. So keep it short and simple. examples: **`main`** or **`map`**. This is the folder where we'll be adding all of the `.mcfunction` files. (In these docs, `foo` will be used as the example.)
 
 ### Tick and Load `.json` files:
 
@@ -70,27 +73,48 @@ Please note that the `pack_format` number can change depending on future Minecra
 ```
 {
 	"values": [
-		"%:load"
+		"foo:load"
 	]
 }
 ```
-> Replace the `%` with the name of the folder you chose that effects your functions. (Provided examples were **`main`** or **`map`**)
+> Replace the `foo` with the name of the folder you chose that effects your functions. (Provided examples were **`main`** or **`map`**)
 
 
 * And in the same folder create another new file called **`tick.json`**, and inside pase this code:
 ```
 {
 	"values": [
-		"%:tick"
+		"foo:tick"
 	]
 }
 ```
-> Replace the `%` with the name of the folder you chose that effects your functions. (Provided examples were **`main`** or **`map`**)
+> Replace the `foo` with the name of the folder you chose that effects your functions. (Provided examples were **`main`** or **`map`**)
 
 ### Working with `.mcfunction` files:
 
 8. Back to the `data` folder, go into the folder you named for your functions, and create a folder within named: **`functions`**
 9. This `functions` folder is where all of your `.mcfunction` files will be held. Create a new file and name it **`tick.mcfunction`** and another named **`load.mcfunction`** These are the two files we setup the allocation for prior.
+
+
+### Final File Structure:
+
+```md
+`.minecraft/saves/(world)/datapacks`
+    └(your-datapack-name)
+      ├`pack.mcmeta`
+      └(data)
+        ├(minecraft)
+        |  └(tags)
+        |    └(functions)
+        |      ├`load.json`
+        |      └`tick.json`
+        └(foo)
+           └(functions)
+             ├`load.mcfunction`
+             └`tick.mcfunction`
+```
+
+
 
 To test that the datapack works, in the `load.mcfunction` file, type `say hello new datapack`. Save it and in-game, type the command `/reload`, If everything is setup correctly, the Say command should execute.
 
