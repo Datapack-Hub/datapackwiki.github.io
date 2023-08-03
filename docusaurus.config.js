@@ -71,6 +71,7 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
+          {to: 'resources', label: 'Resources', position: 'right'},
           {to: 'credits', label: 'Credits', position: 'right'},
         ],
       },

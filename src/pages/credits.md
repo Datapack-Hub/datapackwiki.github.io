@@ -12,7 +12,7 @@ Listed here will be credits for those who have contributed towards the MCFunctio
 
 ### Editorial Team
 
-> Aandeel
+> - Aandeel
 
 ### Contributors
 
@@ -24,4 +24,7 @@ Listed here will be credits for those who have contributed towards the MCFunctio
 
 ### Special Thanks
 
-> FetchBot
+> - FetchBot
+> - Maxaxik
+> - PyroStunts
+> - Misode
