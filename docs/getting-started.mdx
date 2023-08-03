@@ -4,6 +4,17 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Link from '@docusaurus/Link';
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+    {children}
+  </span>
+);
 
 # Getting Started
 
@@ -113,8 +124,6 @@ Please note that the `pack_format` number can change depending on future Minecra
              ├`load.mcfunction`
              └`tick.mcfunction`
 ```
-
-
 
 To test that the datapack works, in the `load.mcfunction` file, type `say hello new datapack`. Save it and in-game, type the command `/reload`, If everything is setup correctly, the Say command should execute.
 
