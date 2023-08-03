@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'MCFunctions Docs',
+  title: 'MCFunctions Wiki',
   tagline: 'Learn and understand the fundamentals to creating Datapacks in Minecraft',
   favicon: 'img/favicon.ico',
 
@@ -19,7 +19,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'MCFunctions', // Usually your GitHub org/user name.
-  projectName: 'Docs', // Usually your repo name.
+  projectName: 'Wiki', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -61,7 +61,7 @@ const config = {
       navbar: {
         title: '',
         logo: {
-          alt: 'MCFunctions.com Logo',
+          alt: 'MCFunctions.wiki Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -69,7 +69,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Documentation',
+            label: 'Docs',
           },
           {to: 'resources', label: 'Resources', position: 'right'},
           {to: 'credits', label: 'Credits', position: 'right'},

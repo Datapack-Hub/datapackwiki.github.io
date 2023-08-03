@@ -6,7 +6,7 @@ title: Credits
 
 :::note
 
-Listed here will be credits for those who have contributed towards the MCFunctions docs.
+Listed here will be credits for those who have contributed towards the MCFunctions Wiki.
 
 :::
 
