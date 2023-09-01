@@ -6,19 +6,19 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'MCFunctions Wiki',
+  title: 'Datapack Wiki',
   tagline: 'Learn and understand the fundamentals to creating Datapacks in Minecraft',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://mcfunctions.wiki/',
+  url: 'https://datapack.wiki/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'MCFunctions', // Usually your GitHub org/user name.
+  organizationName: 'Datapack Wiki', // Usually your GitHub org/user name.
   projectName: 'Wiki', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -61,7 +61,7 @@ const config = {
       navbar: {
         title: '',
         logo: {
-          alt: 'MCFunctions.wiki Logo',
+          alt: 'Datapack.wiki Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -77,7 +77,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} MCFunctions.wiki, By Aandeel <br><a>MCFunctions.wiki is not affiliated with Minecraft or Mojang</a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} Datapack.wiki, By Aandeel <br><a>Datapack.wiki is not affiliated with Minecraft or Mojang</a>`,
       },
       prism: {
         theme: lightCodeTheme,
