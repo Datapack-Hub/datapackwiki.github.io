@@ -63,6 +63,7 @@ const config = {
         logo: {
           alt: 'Datapack.wiki Logo',
           src: 'img/logo.svg',
+          srcDark: 'img/logo_white.svg'
         },
         items: [
           {
@@ -77,7 +78,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Datapack.wiki, By Aandeel <br><a>Datapack.wiki is not affiliated with Minecraft or Mojang</a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} Datapack.wiki (Apart of datapackhub.net) <br><a>Datapack.wiki is not affiliated with Minecraft or Mojang</a>`,
       },
       prism: {
         theme: lightCodeTheme,

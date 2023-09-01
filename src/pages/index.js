@@ -25,7 +25,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="https://discord.gg/6GeGaGjs97">
+            to="https://discord.datapackhub.net/">
             Join the discord.
           </Link>
         </div>
