@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        The <b>MCFunctions Wiki</b> are being made to help anyone and everyone wherever you stand in your progress with creating datapacks for Minecraft.
+        The <b>Datapack Wiki</b> are being made to help anyone and everyone wherever you stand in your progress with creating datapacks for Minecraft.
       </>
     ),
   },
@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        <b>MCFunctions.wiki</b> is providing you with core examples, and ways to use certain features to your advantage. these will be displayed in: <br></br><code>Code Blocks like these.</code>
+        <b>Datapack.wiki</b> is providing you with core examples, and ways to use certain features to your advantage. these will be displayed in: <br></br><code>Code Blocks like these.</code>
       </>
     ),
   },
