@@ -113,7 +113,6 @@ const config = {
         //... other Algolia params
       },
     }),
-};
-
+  }
 
 module.exports = config;
