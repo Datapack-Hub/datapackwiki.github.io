@@ -72,18 +72,45 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
+          {to: 'https://datapackhub.net/', label: 'Datapack Hub', position: 'left'},
           {to: 'resources', label: 'Resources', position: 'right'},
           {to: 'credits', label: 'Credits', position: 'right'},
         ],
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Datapack.wiki (Apart of datapackhub.net) <br><a>Datapack.wiki is not affiliated with Minecraft or Mojang</a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} Datapack.wiki (A part of <a href="https://datapackhub.net/">Datapackhub.net</a>) <br><a>Datapack.wiki is not affiliated with Minecraft or Mojang</a>`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         defaultLanguage: 'js',
+      },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'O6BRHDRGDV',
+  
+        // Public API key: it is safe to commit it
+        apiKey: '812122497d2a622884ee7714b69bcd56',
+  
+        indexName: 'datapack',
+  
+        insights: true,
+        // Optional: see doc section below
+        contextualSearch: true,
+  
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'external\\.com|domain\\.com',
+  
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+  
+        // Optional: Algolia search parameters
+        searchParameters: {},
+  
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+  
+        //... other Algolia params
       },
     }),
 };
