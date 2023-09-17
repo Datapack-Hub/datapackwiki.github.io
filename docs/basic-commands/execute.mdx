@@ -15,10 +15,197 @@ export const Highlight = ({children, color}) => (
     {children}
   </span>
 );
+import '/src/css/table-style.css';
 
 # Execute
 
 The execute command will run a specified command relative to variables you input.
+
+```mcfunction
+# Basic Syntax
+/execute <subcommand>
+```
+## Subcommands
+
+### align
+<table>
+  <tbody>
+    <tr>
+      <td width="30%"><code> align &lt;xyz&gt; </code></td>
+      <td> It aligns commands position to the corner of the current block. You can use x, y, and z in any combination and amount but you have to use at least one of them.</td>
+    </tr>
+  </tbody>
+</table>
+
+### anchored
+<table>
+  <tbody>
+    <tr>
+      <td width="50%"><code> anchored eyes </code></td>
+      <td> Anchors the commands position to the executing entities eyes.</td>
+    </tr>
+    <tr>
+      <td width="50%"><code> anchhored feet </code></td>
+      <td> Anchors the commands position to the executing entities feet.</td>
+    </tr>
+  </tbody>
+</table>
+
+### as
+<table sty>
+  <tbody>
+    <tr>
+      <td width="50%"><code> as &lt;selector&gt; </code></td>
+      <td> Executes the command as every entity that matches the selector but it does not move the commands position. </td>
+    </tr>
+  </tbody>
+</table>
+
+### at
+<table sty>
+  <tbody>
+    <tr>
+      <td width="50%"><code> at &lt;selector&gt; </code></td>
+      <td> Executes the command at every entity that matches the selector but it does not executes as that entity. </td>
+    </tr>
+  </tbody>
+</table>
+
+### facing
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td width="50%"><code> facing &lt;x y z&gt; </code></td>
+            <td> Executes the command facing the specified coordinates.</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td width="50%"><code> facing entity &lt;selector&gt; </code></td>
+            <td> Executes the command facing an entity that matches the selector.</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### if
+<div class="table-wrap">
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td width="50%"><code> if biome &lt;x y z&gt; &lt;biome id/tag&gt; </code></td>
+            <td> </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td width="50%"><code> if block &lt;x y z&gt; &lt;block id/tag&gt; </code></td>
+            <td> </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td width="50%"><code> if blocks &lt;x y z&gt; &lt;x y z&gt; &lt;x y z&gt; &lt;block id/tag&gt; all</code></td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td width="50%"><code> if blocks &lt;x y z&gt; &lt;x y z&gt; &lt;x y z&gt; &lt;block id/tag&gt; masked</code></td>
+            <td> </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td width="50%"><code> if data block &lt;x y z&gt; &lt;NBT path&gt;</code></td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td width="50%"><code> if data entity &lt;selector&gt; &lt;NBT path&gt;</code></td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td width="50%"><code> if data storage &lt;storage id&gt; &lt;NBT path&gt;</code></td>
+            <td> </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td width="50%"><code> if dimension &lt;dimension id&gt;</code></td>
+            <td> </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td width="50%"><code> if entity &lt;selector&gt;</code></td>
+            <td> </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td width="50%"><code> if loaded &lt;x y z&gt;</code></td>
+            <td> </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td width="50%"><code> if predicate &lt;predicate id&gt;</code></td>
+            <td> </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td width="50%"><code> if score &lt;selector&gt; &lt;objective&gt; &lt; &lt;selector&gt; &lt;objective&gt;</code></td>
+            <td> </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 :::note
 
