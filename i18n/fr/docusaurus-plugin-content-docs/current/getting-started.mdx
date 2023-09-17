@@ -1,0 +1,131 @@
+---
+sidebar_position: 1
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Link from '@docusaurus/Link';
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+    {children}
+  </span>
+);
+
+# Commencer
+
+Si vous débutez avec les packs de données, vous êtes au bon endroit. En regardant autour de vous, se lancer dans la création de packs de données peut sembler déroutant, mais une fois que vous aurez compris les bases, vous partirez du bon pied.
+Cette page de démarrage explique étape par étape comment configurer la structure de fichiers d'un pack de données, en particulier pour l'utilisation des fichiers `.mcfunction`.
+
+:::note
+
+Ces documents sont toujours en cours de travail, veuillez rejoindre le <Link to="https://discord.datapackhub.net/">Serveur Discord</Link> pour toute aide spécifique dont vous avez besoin.
+
+:::
+
+## Qu’est-ce qu’un Datapack?
+
+- Avec le recul, un Datapack est une collection de fichiers « .json » et de fichiers `.mcfunction` qui offrent un moyen de personnaliser davantage l'expérience Minecraft.
+- Les datapacks peuvent être utilisés pour remplacer ou ajouter de nouveaux:
+  - Avancées
+  - Dimensions
+  - Les fonctions
+  - Tableaux de butin
+  - Prédicats
+  - Modificateurs d'objet
+  - Recettes
+  - Structures
+  - Mots clés
+  - Types de dégâts
+  - Paramètres de génération mondiale
+  - Biomes
+
+## De quoi aurez-vous besoin pour créer un Datapack ?
+
+- Un éditeur de texte fiable, nous recommandons: <Link to="https://code.visualstudio.com">**Visual Studio Code**</Link> avec le <Link to="https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server">Data-pack Helper Plus (Extension)</Link> en conjonction avec le <Link to="https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction">language-mcfunction (Extension)</Link>. [Ces extensions aideront à la syntaxe des commandes lors de la création de fichiers `.mcfunction`].
+
+## Comment mettre en place la base du Datapack:
+
+1. Pour commencer, dans le dossier de sauvegarde du monde sélectionné de votre choix, accédez au dossier du datapack du monde situé ici : `.minecraft/saves/(world)/datapacks`
+2. Dans ce répertoire, créez un nouveau dossier. Vous pouvez nommer cela comme vous le souhaitez.
+
+### Le fichier `pack.mcmeta`:
+
+3. Entrez dans le dossier et créez un nouveau fichier avec le nom et l'extension: **`pack.mcmeta`**, c'est ce que Minecraft lit pour identifier le fichier en tant que datapack.
+4. Dans le fichier `pack.mcmeta`, vous devrez coller ces lignes de code:
+```
+{
+	"pack": {
+		"pack_format": 15,
+		"description": "(Remplissez-le avec la description de votre pack de données.)"
+	}
+}
+```
+
+:::caution
+Veuillez noter que le numéro `pack_format` peut changer en fonction des futures mises à jour de Minecraft. **15** est le numéro de format du pack de données de la version majeure actuelle.
+:::
+
+5. Enregistrez le fichier `pack.mcmeta` et dans le même répertoire, créez un nouveau fichier nommé : **`data`**.
+6. Dans le nouveau dossier « data », créez 2 nouveaux dossiers. Un nommé : **`minecraft`** et un autre nommé comme vous le souhaitez. Le nom que vous choisissez pour ce dossier aura un impact sur la façon dont vous exécuterez les fonctions à l'avenir. Alors soyez bref et simple. exemples : **`main`** ou **`map`**. C'est le dossier dans lequel nous ajouterons tous les fichiers « .mcfunction ». (Dans ces documents, `foo` sera utilisé comme exemple.)
+
+### Cochez et chargez les fichiers `.json`:
+
+- Le fichier `tick.json` alloue un fichier de sélection dans notre dossier de fonctions à créer comme étant le fichier `.mcfunction` désigné qui exécute chaque tick (un peu comme un bloc de commande répétitif.)
+- Le fichier `load.json` alloue un fichier de sélection dans le dossier de fonctions non encore créé pour être le fichier `.mcfunction` désigné qui s'exécute à chaque fois que le pack de données est rechargé dans le jeu avec `/reload`.
+
+7. Dans le nouveau dossier `minecraft`, créez un autre dossier nommé **`tags`**, et à l'intérieur de celui-ci un autre dossier nommé **`functions`**, dans lequel nous allouerons notre `load` et `tick` fichiers json.
+
+* Créez un nouveau fichier appelé **`load.json`** et collez ce code à l'intérieur:
+```
+{
+	"values": [
+		"foo:load"
+	]
+}
+```
+> Remplacez le `foo` par le nom du dossier que vous avez choisi et qui affecte vos fonctions. (Les exemples fournis étaient **`main`** ou **`map`**)
+
+
+* Et dans le même dossier, créez un autre nouveau fichier appelé **`tick.json`**, et collez ce code à l'intérieur:
+```
+{
+	"values": [
+		"foo:tick"
+	]
+}
+```
+> Remplacez le `foo` par le nom du dossier que vous avez choisi et qui affecte vos fonctions. (Les exemples fournis étaient **`main`** ou **`map`**)
+
+### Travailler avec les fichiers `.mcfunction`:
+
+8. Retournez au dossier `data`, allez dans le dossier que vous avez nommé pour vos fonctions et créez un dossier nommé: **`functions`**
+9. Ce dossier « fonctions » est l'endroit où tous vos fichiers `.mcfunction` seront conservés. Créez un nouveau fichier et nommez-le **`tick.mcfunction`** et un autre nommé **`load.mcfunction`** Ce sont les deux fichiers pour lesquels nous avons configuré l'allocation auparavant.
+
+### Structure du fichier final:
+
+```md
+`.minecraft/saves/(world)/datapacks`
+    └(your-datapack-name)
+      ├`pack.mcmeta`
+      └(data)
+        ├(minecraft)
+        |  └(tags)
+        |    └(functions)
+        |      ├`load.json`
+        |      └`tick.json`
+        └(foo)
+           └(functions)
+             ├`load.mcfunction`
+             └`tick.mcfunction`
+```
+
+Pour tester que le datapack fonctionne, dans le fichier `load.mcfunction`, tapez `say hello new datapack`. Enregistrez-le et dans le jeu, tapez la commande `/reload`. Si tout est correctement configuré, la commande Say devrait s'exécuter.
+
+:::caution
+Veuillez noter que les fichiers `.mcfunction` n'utilisent **PAS** le préfixe **`/`** pour les commandes. L'ajout d'un `/` empêchera le chargement du pack de données, jusqu'à ce qu'il soit supprimé de toutes les commandes contenant le préfixe.
+:::

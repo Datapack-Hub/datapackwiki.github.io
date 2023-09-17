@@ -1,0 +1,22 @@
+{
+  "logo.alt": {
+    "message": "Datapack.wiki Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documentation": {
+    "message": "Documentation",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.Datapack Hub": {
+    "message": "Datapack Hub",
+    "description": "Navbar item with label Datapack Hub"
+  },
+  "item.label.Resources": {
+    "message": "Ressources",
+    "description": "Navbar item with label Resources"
+  },
+  "item.label.Credits": {
+    "message": "Crédits",
+    "description": "Navbar item with label Credits"
+  }
+}

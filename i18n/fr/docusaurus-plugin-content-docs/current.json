@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Suivant",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Basic Commands": {
+    "message": "Commandes de base",
+    "description": "The label for category Basic Commands in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Basic Commands.link.generated-index.description": {
+    "message": "Apprenez les bases des commandes les plus couramment utilisées dans les packs de données.",
+    "description": "The generated-index page description for category Basic Commands in sidebar tutorialSidebar"
+  }
+}

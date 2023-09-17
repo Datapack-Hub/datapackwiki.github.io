@@ -29,7 +29,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'fr'],
   },
 
   presets: [
@@ -75,6 +75,10 @@ const config = {
           {to: 'https://datapackhub.net/', label: 'Datapack Hub', position: 'left'},
           {to: 'resources', label: 'Resources', position: 'right'},
           {to: 'credits', label: 'Credits', position: 'right'},
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
         ],
       },
       footer: {
