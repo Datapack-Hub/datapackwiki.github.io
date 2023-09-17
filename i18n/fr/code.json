@@ -1,6 +1,6 @@
 {
   "Read the docs.": {
-    "message": "Consultez les documents."
+    "message": "Lirez les docs."
   },
   "Join the discord.": {
     "message": "Rejoignez la discord."
@@ -9,7 +9,7 @@
     "message": "Facile à comprendre"
   },
   "The Datapack Wiki are being made to help anyone and everyone wherever you stand in your progress with creating datapacks for Minecraft.": {
-    "message": "Le Datapack Wiki est conçu pour aider tout le monde, où que vous soyez, dans votre progression dans la création de packs de données pour Minecraft."
+    "message": "Le Datapack Wiki est conçu pour aider tout le monde, où que vous soyez, dans votre progression dans la création de datapacks pour Minecraft."
   },
   "Focus on What Matters": {
     "message": "Concentrez-vous sur ce qui compte"
@@ -23,8 +23,8 @@
   "Powered by the community": {
     "message": "Alimenté par la communauté"
   },
-  "These docs are fueld by the community, and will be an expansive yet intreguing insight on how to use and deploy datapacks for any use case scenario.": {
-    "message": "Ces documents sont alimentés par la communauté et constitueront un aperçu à la fois complet et intéressant de la manière d'utiliser et de déployer des packs de données pour n'importe quel scénario de cas d'utilisation."
+  "These docs are fueled by the community, and will be an expansive yet intriguing insight on how to use and deploy datapacks for any use case scenario.": {
+    "message": "Ces documents sont alimentés par la communauté et constitueront un aperçu à la fois complet et intéressant de la manière d'utiliser et de déployer des datapacks pour n'importe quel scénario de cas d'utilisation."
   },
   "theme.ErrorPageContent.title": {
     "message": "Cette page a planté.",
@@ -389,7 +389,7 @@
     "description": "The explanatory text of the action for Escape key"
   },
   "theme.SearchModal.footer.closeKeyAriaLabel": {
-    "message": "Touche Echap",
+    "message": "Touche Échap",
     "description": "The ARIA label for the Escape key button that close the modal"
   },
   "theme.SearchModal.footer.searchByText": {

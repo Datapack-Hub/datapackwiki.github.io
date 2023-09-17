@@ -17,7 +17,7 @@ const FeatureList = [
   {
     title: <Translate>Powered by the community</Translate>,
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: <Translate>These docs are fueld by the community, and will be an expansive yet intreguing insight on how to use and deploy datapacks for any use case scenario.</Translate>
+    description: <Translate>These docs are fueled by the community, and will be an expansive yet intriguing insight on how to use and deploy datapacks for any use case scenario.</Translate>
   },
 ];
 
